@@ -7,7 +7,7 @@ export const Projects = () => {
         <h2>03. Algumas coisas que construí</h2>
         Projetos
       </Desc>
-      {/* <GithubRepositores /> */}
+      {/* <GithubRepositores />git */}
     </Container>
   );
 };
