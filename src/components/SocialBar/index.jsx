@@ -1,14 +1,9 @@
 import styled from 'styled-components';
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillCodepenSquare,
-} from 'react-icons/Ai';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/Ai';
 export const SocialBar = () => {
   return (
     <>
-      <NavFixed>
+      <Container>
         <Icons>
           <AiFillGithub />
         </Icons>
@@ -18,73 +13,38 @@ export const SocialBar = () => {
         <Icons>
           <AiFillLinkedin />
         </Icons>
-        <Icons>
-          <AiFillCodepenSquare />
-        </Icons>
-        <Border></Border>
-      </NavFixed>
-      <EmailFixed>
-        <Email>vonorvictor@gmail.com</Email>
-        <BorderEmail></BorderEmail>
-      </EmailFixed>
+      </Container>
+      <h3>
+        Projetado e construído por{' '}
+        <Gitlink href="https://github.com/V0nor">Victor de Carli</Gitlink>
+      </h3>
     </>
   );
 };
 
-const NavFixed = styled.div`
+const Container = styled.div`
   display: flex;
-  position: fixed;
-  bottom: 7em;
-  margin: 0 3em;
-  flex-direction: column;
-  line-height: 2.4;
-`;
-
-const Border = styled.div`
-  position: absolute;
-  top: 19em;
-  left: -4em;
-  rotate: 90deg;
-  height: 1.7px;
-  width: 150px;
-  background-color: #fff;
-`;
-const BorderEmail = styled.div`
-  position: absolute;
-  top: 13px;
-  right: -8em;
-  height: 1.7px;
-  width: 150px;
-  rotate: 180deg;
-  background-color: #fff;
-`;
-
-const EmailFixed = styled.a`
-  position: fixed;
-  right: 0;
-  bottom: 10em;
-  rotate: 90deg;
-  font-size: 1.3em;
-`;
-
-const Email = styled.a`
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    color: orangered;
-    transform: translateY(-3px);
-  }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
 `;
 
 const Icons = styled.a`
-  font-size: 1.5em;
+  font-size: 3em;
+  margin: 0 1em;
+  padding-top: 1em;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
-    color: orangered;
+    color: #f53d53;
     transform: translateY(-3px);
   }
+`;
+
+const Gitlink = styled(Icons)`
+  color: unset;
+  margin: 0;
+  font-size: 1em;
 `;

@@ -1,0 +1,26 @@
+import styled from 'styled-components';
+import { ContactForm } from './Form';
+import { SocialBar } from '../SocialBar';
+export const Contact = () => {
+  return (
+    <Container>
+      <Title>Entre em Contato</Title>
+      <ContactForm />
+    </Container>
+  );
+};
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  color: #000;
+  background: #fff;
+`;
+
+const Title = styled.h2`
+  font-size: 2em;
+`;

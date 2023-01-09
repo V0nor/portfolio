@@ -1,16 +1,18 @@
 import styled from 'styled-components';
-
+import { SocialBar } from '../SocialBar';
 export const Header = () => {
   return (
-    <Container>
-      <Bio>Olá, eu me Chamo Victor, e sou programador Front-end</Bio>
-      <Image src="../imgs/fotoperfil.jpg" />
-    </Container>
+    <>
+      <Container>
+        <Bio>Olá, eu me Chamo Victor, e sou programador Front-end</Bio>
+        <Image src="../imgs/fotoperfil.jpg" />
+      </Container>
+    </>
   );
 };
 
 const Container = styled.div`
-  height: 95vh;
+  height: 85vh;
   display: flex;
   flex-flow: row-reverse wrap;
   align-items: center;

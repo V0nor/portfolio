@@ -4,22 +4,42 @@ export const Experience = () => {
   return (
     <Container>
       <Desc>
-        <h2>02. Onde já trabalhei</h2>
-        <p>Em busca da primeira oportunidade!</p>
-        <p>Mais informações em breve...</p>
+        <AvisoContainer>
+          <h2>Onde já trabalhei</h2>
+          <Aviso>Em breve!</Aviso>
+        </AvisoContainer>
       </Desc>
     </Container>
   );
 };
 
 const Container = styled.div`
-  margin: 3em auto;
-  max-width: 1000px;
-  background-color: red;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+
+  margin: auto;
+  background: rgba(245, 61, 83, 1);
 `;
 const Desc = styled.div`
   font-size: 1.2em;
   line-height: 1;
-  margin: 1em;
-  max-width: 600px;
+`;
+
+const Aviso = styled.span`
+  padding: 15px;
+  background-color: #000;
+  border-radius: 15px;
+`;
+
+const AvisoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 15px;
 `;
