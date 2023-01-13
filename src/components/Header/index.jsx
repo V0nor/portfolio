@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SocialBar } from '../SocialBar';
 export const Header = () => {
   return (
     <>
@@ -24,6 +23,11 @@ const Container = styled.div`
     rgba(2, 0, 36, 1) 30%,
     rgba(245, 61, 83, 1) 20%
   );
+  @media only screen and (max-width: 972px) {
+    margin-top: 2em;
+    background: rgb(2, 0, 36);
+    flex-flow: column;
+  }
 `;
 
 const Bio = styled.h2`
@@ -32,10 +36,17 @@ const Bio = styled.h2`
   max-width: 600px;
   line-height: 1;
   color: #fff;
+  @media only screen and (max-width: 972px) {
+    font-size: 2.4em;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 const Image = styled.img`
-  width: 350px;
+  min-width: 200px;
+  width: 25vw;
   height: 350px;
   object-fit: cover;
   border-radius: 10px;

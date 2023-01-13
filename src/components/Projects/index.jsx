@@ -23,18 +23,18 @@ export const Projects = () => {
 
 const Title = styled.h2`
   font-size: 2em;
-  /* padding-top: 2em; */
   text-align: center;
 `;
 
 const Container = styled.div`
-  height: 70vh;
+  height: auto;
   margin: auto;
   background-color: #020024;
 `;
 
 const ContainerProject = styled.div`
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   margin: 3em auto;
 `;

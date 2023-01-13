@@ -242,7 +242,7 @@ const ContainerDesc = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-top: 10em;
+  margin-top: 8em;
   background: rgb(2, 0, 36);
   padding-bottom: 8em;
 `;
@@ -255,9 +255,14 @@ const Desc = styled.p`
   font-size: 1.2em;
   line-height: 1;
   max-width: 600px;
-  width: 700px;
   text-align: justify;
   line-height: 1.5em;
+
+  @media only screen and (max-width: 960px) {
+    width: 250px;
+    text-align: center;
+    margin: 0;
+  }
 `;
 
 const Github = styled.a`
@@ -288,6 +293,9 @@ const Skills = styled.ul`
   font-size: 2em;
   background-color: #f53d53;
   border-radius: 15px;
+  @media only screen and (max-width: 960px) {
+    grid-template-columns: auto;
+  }
 `;
 
 const Skill = styled.li`
@@ -308,22 +316,29 @@ const SkillSVG = styled.svg`
 const QuoteLeft = styled(FaQuoteLeft)`
   position: relative;
   font-size: 70px;
-  bottom: 90px;
+  bottom: 80px;
   right: 15px;
+  @media only screen and (max-width: 440px) {
+    display: none;
+  }
 `;
 const QuoteRight = styled(FaQuoteRight)`
   position: relative;
   font-size: 70px;
-  top: 90px;
+  top: 80px;
   left: 18px;
+  @media only screen and (max-width: 440px) {
+    font-size: 90px;
+    top: 1.25em;
+  }
 `;
 const Frase = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 600px;
+  width: 60vw;
   margin-top: 5em;
-  padding: 2em;
+  padding: 1em;
   font-size: 1.6em;
   border-radius: 15px;
   border: 4px solid #f53d53;

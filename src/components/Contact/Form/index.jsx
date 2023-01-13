@@ -82,7 +82,8 @@ const Input = styled.input`
   position: relative;
   margin: 0 0 1em;
   padding: 1.5em;
-  width: 400px;
+  width: 35vw;
+  min-width: 250px;
   font-family: unset;
   font-size: 1em;
   color: #000;
@@ -95,13 +96,13 @@ const Input = styled.input`
 
 const Textarea = styled.textarea`
   font-family: unset;
-  width: 400px;
+  width: 35vw;
+  min-width: 250px;
   height: 150px;
   margin: 0 0 1em;
   padding: 1.5em;
   font-size: 1em;
   color: #000;
-  width: 400px;
   border-radius: 15px;
   background-color: #fff;
   border: 2px solid #020024;

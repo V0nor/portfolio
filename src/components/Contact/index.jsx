@@ -15,8 +15,7 @@ const Container = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 8em;
-  padding-bottom: 8em;
+  padding-bottom: 5em;
   color: #000;
   background: #fff;
 `;

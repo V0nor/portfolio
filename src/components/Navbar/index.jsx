@@ -1,38 +1,49 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SvgLogo } from '../Logo';
-export const Navbar = () => {
+import { MenuMobile } from '../Menu';
+import { useState } from 'react';
+export function Navbar() {
+  const [menuIsVisible, setMenuIsVisible] = useState(true);
   return (
-    <Navigation>
-      <SvgLogo />
+    <>
       <NavContainer>
-        <NavLinks>Sobre</NavLinks>
-        {/* <NavLinks>Experiências</NavLinks> */}
-        <NavLinks>Projetos</NavLinks>
-        <NavLinks>Contato</NavLinks>
-        <Btn>
-          <Linkbtn to="/resumo">Curriculo</Linkbtn>
-        </Btn>
-      </NavContainer>
-    </Navigation>
-  );
-};
+        <Logo />
+        <MenuMobile />
+        <Nav>
+          <NavLinks>Sobre</NavLinks>
+          {/* <NavLinks>Experiências</NavLinks> */}
+          <NavLinks>Projetos</NavLinks>
+          <NavLinks>Contato</NavLinks>
 
-const Navigation = styled.div`
+          <Linkbtn to="/resumo">Curriculo</Linkbtn>
+        </Nav>
+      </NavContainer>
+    </>
+  );
+}
+
+const Logo = styled(SvgLogo)`
+  display: block;
+  margin: auto;
+  @media only screen and (max-width: 960px) {
+    stroke: ${(props) => (props.stroke ? '#f53d53' : '#fff')};
+  }
+`;
+const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 30%,
-    rgba(245, 61, 83, 1) 20%
-  );
+  @media only screen and (max-width: 960px) {
+    display: none;
+    text-align: center;
+  }
 `;
 
 const NavContainer = styled.ul`
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding: 0.5em;
 `;
 
@@ -48,7 +59,7 @@ const NavLinks = styled.li`
   }
 `;
 
-const Btn = styled.button`
+const Linkbtn = styled(Link)`
   inset: 0;
   display: flex;
   align-items: center;
@@ -64,11 +75,8 @@ const Btn = styled.button`
   cursor: pointer;
   transition: all 0.4s;
   &:hover {
-    transform: scale(0.95);
+    transform: translateY(-5px);
   }
-`;
-
-const Linkbtn = styled(Link)`
   text-decoration: none;
   color: unset;
 `;
