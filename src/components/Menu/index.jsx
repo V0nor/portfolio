@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { IoClose } from 'react-icons/io5';
 export function MenuMobile() {
   return (
     <Hamburger>
@@ -20,22 +20,39 @@ export function MenuMobile() {
 }
 
 const Hamburger = styled.button`
-  // removes default border on button element
-  margin: auto;
-  border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  // positions the icon to the right and center aligns it vertically
+  position: absolute;
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  display: none;
-  &:hover {
-    background-color: #f53d5399;
+  background: rgba(17, 18, 17, 8.95);
+  background: linear-gradient(
+    34deg,
+    rgba(25, 88, 24, 0.95) 0%,
+    rgba(17, 17, 17, 0.95) 95%
+  );
+
+  > svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   @media only screen and (max-width: 960px) {
     display: block;
   }

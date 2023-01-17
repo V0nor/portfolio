@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SvgLogo } from '../Logo';
+import { RiMenu3Fill } from 'react-icons/Ri';
 import { MenuMobile } from '../Menu';
-import { useState } from 'react';
+
 export function Navbar() {
-  const [menuIsVisible, setMenuIsVisible] = useState(true);
   return (
     <>
       <NavContainer>
         <Logo />
-        <MenuMobile />
         <Nav>
           <NavLinks>Sobre</NavLinks>
           {/* <NavLinks>Experiências</NavLinks> */}

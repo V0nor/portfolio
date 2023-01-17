@@ -8,7 +8,7 @@ export const About = () => {
         <Title>Sobre mim</Title>
         <Desc>
           Como desenvolvedor Front-end sou apaixonado por tecnologia, uso
-          atualmente o React, e algumas vezes apenas o Javascript, nos meus
+          atualmente o React e algumas vezes apenas o Javascript nos meus
           projetos. Acredito que boas práticas é essencial para um melhor
           desempenho do projeto. Portanto, Eu me esforço para o site ficar com o
           melhor desempenho possível.
