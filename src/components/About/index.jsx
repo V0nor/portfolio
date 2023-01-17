@@ -4,22 +4,23 @@ import { FaQuoteLeft } from 'react-icons/fa';
 export const About = () => {
   return (
     <>
-      <ContainerDesc>
+      <ContainerDesc id="sobre">
         <Title>Sobre mim</Title>
         <Desc>
           Como desenvolvedor Front-end sou apaixonado por tecnologia, uso
           atualmente o React e algumas vezes apenas o Javascript nos meus
           projetos. Acredito que boas práticas é essencial para um melhor
-          desempenho do projeto. Portanto, Eu me esforço para o site ficar com o
-          melhor desempenho possível.
-          <br /> <br /> Estudando e desenvolvendo projetos sempre de maneira
-          constante desde 2021 atualmente foco em projetos que ajudam a resolver
+          desempenho do projeto. Portanto, eu me esforço para o site ficar com o
+          melhor desempenho possível. <br />
+          <br />
+          Estudando e desenvolvendo projetos sempre de maneira constante desde
+          2021, tenho atualmente focado em projetos que ajudam a resolver
           problemas da sociedade.
-          <br /> <br /> Meu objetivo atual é entrar no mercado de programação na
-          área de desenvolvimento Front-end. Pretendo mostra ao mundo que estou
+          <br />
+          <br /> Meu objetivo atual é entrar no mercado de programação na área
+          de desenvolvimento Front-end. Pretendo mostrar ao mundo que estou
           pronto para assumir qualquer responsabilidade e exercer meu cargo com
-          excelência
-          <br /> <br />
+          excelência!
           <Github href="https://github.com/V0nor?tab=repositories">
             Meus Projetos no Github
           </Github>

@@ -1,11 +1,29 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../assets/imgs/scattered-forcefields.png';
 
-export const Projects = () => {
+export const Projects = ({ limit, children }) => {
+  const [readMore, setReadMore] = useState(false);
+
+  const text = children;
+
+  const toggleBtn = () => {
+    setReadMore((prevState) => !prevState);
+  };
+
   return (
-    <Container>
+    <Container id="projetos">
       <Title>Projetos</Title>
-      <ContainerProject>
+      <ContainerProject limit={4}>
+        <Projetos>
+          <Aviso>EM BREVE</Aviso>
+        </Projetos>
+        <Projetos>
+          <Aviso>EM BREVE</Aviso>
+        </Projetos>
+        <Projetos>
+          <Aviso>EM BREVE</Aviso>
+        </Projetos>
         <Projetos>
           <Aviso>EM BREVE</Aviso>
         </Projetos>
@@ -16,7 +34,10 @@ export const Projects = () => {
           <Aviso>EM BREVE</Aviso>
         </Projetos>
       </ContainerProject>
-      {/* <GithubRepositores />git */}
+      {readMore ? text : <Projetos /> > 3}
+      <button onClick={toggleBtn}>
+        {readMore ? 'Mostra mais' : 'Mostrar menos'}
+      </button>
     </Container>
   );
 };
@@ -27,6 +48,7 @@ const Title = styled.h2`
 `;
 
 const Container = styled.div`
+  max-width: 950px;
   height: auto;
   margin: auto;
   background-color: #020024;

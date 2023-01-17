@@ -38,22 +38,4 @@ const Hamburger = styled.button`
     rgba(25, 88, 24, 0.95) 0%,
     rgba(17, 17, 17, 0.95) 95%
   );
-
-  > svg {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  @media only screen and (max-width: 960px) {
-    display: block;
-  }
 `;

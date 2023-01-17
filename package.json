@@ -24,6 +24,7 @@
     "react-fetch-hook": "^1.9.5",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.2",
+    "react-scroll": "^1.8.9",
     "styled-components": "^5.3.6",
     "vite": "^4.0.4"
   }

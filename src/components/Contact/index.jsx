@@ -3,7 +3,7 @@ import { ContactForm } from './Form';
 import { SocialBar } from '../SocialBar';
 export const Contact = () => {
   return (
-    <Container>
+    <Container id="contato">
       <Title>Entre em Contato</Title>
       <ContactForm />
     </Container>
