@@ -2,19 +2,11 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../assets/imgs/scattered-forcefields.png';
 
-export const Projects = ({ limit, children }) => {
-  const [readMore, setReadMore] = useState(false);
-
-  const text = children;
-
-  const toggleBtn = () => {
-    setReadMore((prevState) => !prevState);
-  };
-
+export const Projects = () => {
   return (
     <Container id="projetos">
       <Title>Projetos</Title>
-      <ContainerProject limit={4}>
+      <ContainerProject>
         <Projetos>
           <Aviso>EM BREVE</Aviso>
         </Projetos>
@@ -34,10 +26,6 @@ export const Projects = ({ limit, children }) => {
           <Aviso>EM BREVE</Aviso>
         </Projetos>
       </ContainerProject>
-      {readMore ? text : <Projetos /> > 3}
-      <button onClick={toggleBtn}>
-        {readMore ? 'Mostra mais' : 'Mostrar menos'}
-      </button>
     </Container>
   );
 };

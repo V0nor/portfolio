@@ -1,4 +1,4 @@
-import { Navbar } from '../../components/Navbar';
+import { Navigation } from '../../components/Navbar';
 import { Header } from '../../components/Header';
 import { About } from '../../components/About';
 import { Contact } from '../../components/Contact';
@@ -7,7 +7,7 @@ import { Footer } from '../../components/Footer';
 export const Home = () => {
   return (
     <>
-      <Navbar />
+      <Navigation />
       <Header />
       <About />
       {/* <Experience /> */}

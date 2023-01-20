@@ -4,15 +4,15 @@ export const SocialBar = () => {
   return (
     <>
       <Container>
-        <Icons>
+        <Link href="https://github.com/V0nor">
           <AiFillGithub />
-        </Icons>
-        <Icons>
+        </Link>
+        <Link href="https://www.instagram.com/dev.vict0r/">
           <AiFillInstagram />
-        </Icons>
-        <Icons>
+        </Link>
+        <Link href="https://www.linkedin.com/in/dev-victor/">
           <AiFillLinkedin />
-        </Icons>
+        </Link>
       </Container>
       <Title>
         Projetado e construído por{' '}
@@ -31,7 +31,7 @@ const Container = styled.div`
   height: 25vh;
 `;
 
-const Icons = styled.a`
+const Link = styled.a`
   font-size: 3em;
   margin: 0 10px;
   padding-top: 1em;
@@ -54,7 +54,7 @@ const Title = styled.h3`
   text-align: center;
 `;
 
-const Gitlink = styled(Icons)`
+const Gitlink = styled(Link)`
   color: unset;
   margin: 0;
   font-size: 1em;

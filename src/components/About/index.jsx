@@ -243,7 +243,7 @@ const ContainerDesc = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-top: 8em;
+  margin-top: 2em;
   background: rgb(2, 0, 36);
   padding-bottom: 8em;
 `;
@@ -259,7 +259,12 @@ const Desc = styled.p`
   text-align: justify;
   line-height: 1.5em;
 
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 768px) {
+    width: 450px;
+    text-align: center;
+    margin: 0;
+  }
+  @media only screen and (max-width: 490px) {
     width: 250px;
     text-align: center;
     margin: 0;
@@ -268,10 +273,9 @@ const Desc = styled.p`
 
 const Github = styled.a`
   display: block;
-  margin: auto;
+  margin: 1em auto;
   padding: 15px 20px;
   width: 200px;
-  margin-bottom: 4em;
   border-radius: 30px;
   background-color: rgba(245, 61, 83, 1);
   text-decoration: none;
@@ -286,7 +290,7 @@ const Github = styled.a`
 
 const Skills = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -294,8 +298,9 @@ const Skills = styled.ul`
   font-size: 2em;
   background-color: #f53d53;
   border-radius: 15px;
-  @media only screen and (max-width: 960px) {
-    grid-template-columns: auto;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -313,28 +318,9 @@ const SkillSVG = styled.svg`
   width: 40px;
   padding-right: 10px;
 `;
-
-const QuoteLeft = styled(FaQuoteLeft)`
-  position: relative;
-  font-size: 70px;
-  bottom: 80px;
-  right: 15px;
-  @media only screen and (max-width: 440px) {
-    display: none;
-  }
-`;
-const QuoteRight = styled(FaQuoteRight)`
-  position: relative;
-  font-size: 70px;
-  top: 80px;
-  left: 18px;
-  @media only screen and (max-width: 440px) {
-    font-size: 90px;
-    top: 1.25em;
-  }
-`;
 const Frase = styled.h2`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 60vw;
@@ -343,4 +329,16 @@ const Frase = styled.h2`
   font-size: 1.6em;
   border-radius: 15px;
   border: 4px solid #f53d53;
+`;
+const QuoteLeft = styled(FaQuoteLeft)`
+  position: absolute;
+  font-size: 30px;
+  bottom: -15px;
+  right: 15px;
+`;
+const QuoteRight = styled(FaQuoteRight)`
+  position: absolute;
+  font-size: 30px;
+  top: -15px;
+  left: 18px;
 `;

@@ -26,7 +26,7 @@ const Container = styled.div`
   @media only screen and (max-width: 972px) {
     margin-top: 2em;
     background: rgb(2, 0, 36);
-    flex-flow: column;
+    flex-flow: row-reverse wrap;
   }
 `;
 
@@ -37,18 +37,28 @@ const Bio = styled.h2`
   line-height: 1;
   color: #fff;
   @media only screen and (max-width: 972px) {
-    font-size: 2.4em;
-    max-width: 300px;
+    font-size: 3.2em;
+    max-width: 280px;
     text-align: center;
     justify-content: center;
+  }
+  @media only screen and (max-width: 451px) {
+    font-size: 2.4em;
+    max-width: 340px;
   }
 `;
 
 const Image = styled.img`
   min-width: 200px;
-  width: 25vw;
+  width: 350px;
   height: 350px;
   object-fit: cover;
   border-radius: 10px;
   border: 4px solid #f53d53;
+
+  @media only screen and (max-width: 490px) {
+    width: 250px;
+    text-align: center;
+    margin: 0;
+  }
 `;

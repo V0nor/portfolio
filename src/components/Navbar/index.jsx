@@ -1,78 +1,175 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as Linkextern } from 'react-router-dom';
 import { SvgLogo } from '../Logo';
-import { Link as Linkto, animateScroll as scroll } from 'react-scroll';
-// import { MenuMobile } from '../Menu';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import { useEffect, useState, useRef } from 'react';
+export function Navigation() {
+  const [openDrawer, toggleDrawer] = useState(false);
+  const drawerRef = useRef(null);
 
-export function Navbar() {
+  useEffect(() => {
+    const closeDrawer = (event) => {
+      if (drawerRef.current && drawerRef.current.contains(event.target)) {
+        return;
+      }
+
+      toggleDrawer(false);
+    };
+
+    document.addEventListener('mousedown', closeDrawer);
+    return () => document.removeEventListener('mousedown', closeDrawer);
+  }, []);
   return (
     <>
-      <NavContainer>
-        <Logo />
-        <Nav>
-          <NavLinks to="sobre" spy={true} smooth={true} duration={500}>
-            Sobre
-          </NavLinks>
-          {/* <NavLinks>Experiências</NavLinks> */}
-          <NavLinks to="projetos" spy={true} smooth={true} duration={500}>
-            Projetos
-          </NavLinks>
-          <NavLinks to="contato" spy={true} smooth={true} duration={500}>
-            Contato
-          </NavLinks>
-          <Linkbtn to="/resumo">Curriculo</Linkbtn>
-        </Nav>
-      </NavContainer>
+      <Navbar.Container>
+        <Navbar.Logo>Logo</Navbar.Logo>
+        <HamburgerButton.Container onClick={() => toggleDrawer(true)}>
+          <HamburgerButton.Lines />
+        </HamburgerButton.Container>
+        <Navbar.Items ref={drawerRef} openDrawer={openDrawer}>
+          <HamburgerButton.Close onClick={() => toggleDrawer(false)}>
+            Esconder
+          </HamburgerButton.Close>
+          <Navbar.Item>
+            <Link to="sobre" smooth={true} duration={400}>
+              Sobre
+            </Link>
+          </Navbar.Item>
+          <Navbar.Item>
+            <Link to="projetos" smooth={true} duration={400}>
+              Projetos
+            </Link>
+          </Navbar.Item>
+          <Navbar.Item>
+            <Link to="contato" smooth={true} duration={400}>
+              Contato
+            </Link>
+          </Navbar.Item>
+
+          <Navbar.Item>
+            <Linkextern to="./resumo">Resumo</Linkextern>
+          </Navbar.Item>
+        </Navbar.Items>
+      </Navbar.Container>
     </>
   );
 }
 
-const Logo = styled(SvgLogo)`
-  margin: auto;
-  @media only screen and (max-width: 960px) {
-    stroke: ${(props) => (props.stroke ? '#f53d53' : '#fff')};
-  }
-`;
-const Nav = styled.div`
-  display: flex;
-  align-items: center;
-  @media only screen and (max-width: 960px) {
+const Navbar = {
+  Container: styled.nav`
+    flex: 1;
+    align-self: flex-start;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 0, 36);
+  `,
+  Logo: styled(SvgLogo)`
+    padding: 0.5rem 1rem;
+    min-width: 80px;
+    margin: auto;
+    @media only screen and (max-width: 960px) {
+      stroke: ${(props) => (props.stroke ? '#f53d53' : '#fff')};
+    }
+  `,
+  Items: styled.ul`
+    display: flex;
+    list-style: none;
+
+    @media only screen and (max-width: 40em) {
+      position: fixed;
+      z-index: 2;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      margin: 0;
+      padding: 1rem 2rem;
+      height: 100%;
+      background-color: black;
+      transition: 0.4s;
+      transform: ${({ openDrawer }) =>
+        openDrawer ? `translateX(0)` : `translateX(100%)`};
+    }
+  `,
+  Item: styled.li`
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+    @media only screen and (max-width: 40em) {
+      padding: 1rem 0;
+    }
+  `,
+};
+
+const HamburgerButton = {
+  Container: styled.button`
+    position: relative;
     display: none;
+    height: 3rem;
+    width: 3rem;
+    font-size: 12px;
+    @media only screen and (max-width: 638px) {
+      display: block;
+    }
+
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      top: -25%;
+      left: -25%;
+      position: absolute;
+      display: block;
+      width: 150%;
+      height: 150%;
+    }
+  `,
+  Lines: styled.div`
+    top: 50%;
+    margin-top: -0.125em;
+
+    &,
+    &::after,
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #f53d53;
+      pointer-events: none;
+    }
+    &:after {
+      /* Move bottom line below center line */
+      top: -0.8rem;
+    }
+
+    &:before {
+      /* Move top line on top of center line */
+      top: 0.8rem;
+    }
+  `,
+  Close: styled.div`
+    display: none;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-  }
-`;
+    margin: 1em auto;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #f53d53;
+    border-radius: 30px;
 
-const NavContainer = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 2em;
-`;
-
-const NavLinks = styled(Linkto)`
-  margin: 0.4em 1.5em;
-  text-decoration: none;
-  color: unset;
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-`;
-
-const Linkbtn = styled(Link)`
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 30px;
-  background-color: #f53d53;
-  border: none;
-  cursor: pointer;
-  transition: all 0.4s;
-  &:hover {
-    transform: translateY(-5px);
-  }
-  text-decoration: none;
-  color: unset;
-`;
+    @media only screen and (max-width: 638px) {
+      display: flex;
+    }
+  `,
+};
