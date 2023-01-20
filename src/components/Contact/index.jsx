@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ContactForm } from './Form';
-import { SocialBar } from '../SocialBar';
 export const Contact = () => {
   return (
     <Container id="contato">
