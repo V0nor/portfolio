@@ -45,10 +45,6 @@ export function Navigation() {
               Contato
             </Link>
           </Navbar.Item>
-
-          <Navbar.Item>
-            <Linkextern to="./resumo">Resumo</Linkextern>
-          </Navbar.Item>
         </Navbar.Items>
       </Navbar.Container>
     </>
@@ -98,7 +94,7 @@ const Navbar = {
     transition: all 0.3s;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: scale(0.9);
     }
     @media only screen and (max-width: 40em) {
       padding: 1rem 0;
