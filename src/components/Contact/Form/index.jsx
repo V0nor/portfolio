@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
-
+import AvisoEnvio from '../../Aviso';
 export function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -27,16 +27,16 @@ export function ContactForm() {
         templateParams,
         'YbsXozJJqoV9T8uNZ'
       )
-      .then(
-        () => {
-          setName('');
-          setEmail('');
-          setMessage('');
-        },
-        (err) => {
-          console.log('ERRO: ', err);
+      .then((result) => {
+        setName('');
+        setEmail('');
+        setMessage('');
+        if (result) {
+          <AvisoEnvio />;
+        } else {
+          console.log('Erro!');
         }
-      );
+      });
   }
 
   return (

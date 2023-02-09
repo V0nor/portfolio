@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Link as Linkextern } from 'react-router-dom';
 import { SvgLogo } from '../Logo';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { useEffect, useState, useRef } from 'react';
+
 export function Navigation() {
   const [openDrawer, toggleDrawer] = useState(false);
   const drawerRef = useRef(null);
@@ -23,6 +23,7 @@ export function Navigation() {
     <>
       <Navbar.Container>
         <Navbar.Logo>Logo</Navbar.Logo>
+
         <HamburgerButton.Container onClick={() => toggleDrawer(true)}>
           <HamburgerButton.Lines />
         </HamburgerButton.Container>

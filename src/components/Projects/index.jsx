@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../assets/imgs/scattered-forcefields.png';
 

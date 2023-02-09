@@ -4,16 +4,18 @@ import { About } from '../../components/About';
 import { Contact } from '../../components/Contact';
 import { Projects } from '../../components/Projects';
 import { Footer } from '../../components/Footer';
-export const Home = () => {
+
+export const homePage = () => {
   return (
     <>
       <Navigation />
       <Header />
       <About />
-      {/* <Experience /> */}
       <Projects />
       <Contact />
       <Footer />
     </>
   );
 };
+
+export default homePage;

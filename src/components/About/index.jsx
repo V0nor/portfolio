@@ -7,20 +7,25 @@ export const About = () => {
       <ContainerDesc id="sobre">
         <Title>Sobre mim</Title>
         <Desc>
-          Como desenvolvedor Front-end sou apaixonado por tecnologia, uso
-          atualmente o React e algumas vezes apenas o Javascript nos meus
-          projetos. Acredito que boas práticas é essencial para um melhor
-          desempenho do projeto. Portanto, eu me esforço para o site ficar com o
-          melhor desempenho possível. <br />
+          Sou um programador Front-end júnior altamente motivado, autodidata e
+          com habilidades sólidas em tecnologias como Javascript, HTML, CSS,
+          SCSS, React, Next, Vite, Styled Components e Git. Como profissional
+          autodidata, sou capaz de aprender rapidamente e de me adaptar a novas
+          tecnologias e desafios.
+          <br /> <br /> Além de minhas habilidades técnicas, também possou uma
+          série de soft skills valiosas, incluindo comunicação eficaz, solução
+          de problemas, adaptabilidade, trabalho em equipe, resiliência,
+          liderança, atenção aos detalhes e flexibilidade. Estou sempre
+          procurando novos desafios e oportunidades para desenvolver minhas
+          habilidades e ajudar a alcançar os objetivos da equipe. <br />
           <br />
-          Estudando e desenvolvendo projetos sempre de maneira constante desde
-          2021, tenho atualmente focado em projetos que ajudam a resolver
-          problemas da sociedade.
-          <br />
-          <br /> Meu objetivo atual é entrar no mercado de programação na área
-          de desenvolvimento Front-end. Pretendo mostrar ao mundo que estou
-          pronto para assumir qualquer responsabilidade e exercer meu cargo com
-          excelência!
+          Estou ansioso para me juntar a uma equipe de desenvolvimento
+          bem-sucedida e colaborar em projetos emocionantes e desafiadores.
+          Acredito que posso trazer uma combinação única de habilidades técnicas
+          e soft skills para a equipe e contribuir para o sucesso geral do
+          projeto. <br />
+          Entre em contato comigo se você estiver procurando por alguém
+          dedicado, apaixonado por tecnologias e com vontade de aprender :)
           <Github href="https://github.com/V0nor?tab=repositories">
             Meus Projetos no Github
           </Github>
@@ -113,7 +118,7 @@ export const About = () => {
             </SkillSVG>
             Javascript
           </Skill>
-          <Skill>
+          {/* <Skill>
             <SkillSVG
               xmlns="http://www.w3.org/2000/svg"
               aria-label="TypeScript"
@@ -132,7 +137,7 @@ export const About = () => {
               />
             </SkillSVG>
             Typescript
-          </Skill>
+          </Skill> */}
           <Skill>
             <SkillSVG
               xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +295,7 @@ const Github = styled.a`
 
 const Skills = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
   padding: 0;

@@ -23,7 +23,6 @@ const draw = keyframes`
 
 to{
  stroke-dashoffset: 0;
- /* stroke-dasharray: 0; */
  fill: none;
 }
 

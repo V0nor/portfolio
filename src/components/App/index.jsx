@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from '../../Pages/Home';
-import { Error } from '../Error';
+import HomePage from '../../Pages/Home';
+import ErrorPage from '../Error';
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-export const Error = () => {
+
+export const errorPage = () => {
   return (
     <Container>
       <Logo>
@@ -46,3 +47,5 @@ const Text = styled.h2`
   font-weight: 700;
   color: red;
 `;
+
+export default errorPage;

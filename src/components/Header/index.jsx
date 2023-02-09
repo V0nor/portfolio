@@ -1,10 +1,23 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 export const Header = () => {
   return (
     <>
       <Container>
-        <Bio>Olá, eu me Chamo Victor, e sou programador Front-end</Bio>
-        <Image src="../imgs/fotoperfil.jpg" />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <Bio>Olá, eu me Chamo Victor, e sou programador Front-end</Bio>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Image src="../imgs/fotoperfil.jpg" />
+        </motion.div>
       </Container>
     </>
   );
