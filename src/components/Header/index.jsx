@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { SocialBar } from '../SocialBar';
 export const Header = () => {
   return (
     <>
@@ -9,13 +10,18 @@ export const Header = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          <Bio>Olá, eu me Chamo Victor, e sou programador Front-end</Bio>
+          <Bio>E aí, pessoal! Sou o Victor, um programador Front-end
+            apaixonado por criar sites e interfaces incríveis!</Bio>
+            <SubText>Minhas Redes Sociais</SubText>
+          <SocialBar />
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
+
           <Image src="../imgs/fotoperfil.jpg" />
         </motion.div>
       </Container>
@@ -41,25 +47,34 @@ const Container = styled.div`
     background: rgb(2, 0, 36);
     flex-flow: row-reverse wrap;
   }
+  
 `;
 
 const Bio = styled.h2`
   text-align: left;
-  font-size: 3.8em;
+  font-size: 3em;
   max-width: 600px;
   line-height: 1;
   color: #fff;
   @media only screen and (max-width: 972px) {
-    font-size: 3.2em;
-    max-width: 280px;
+    font-size: 2.5em;
+    max-width: 480px;
     text-align: center;
     justify-content: center;
   }
   @media only screen and (max-width: 451px) {
-    font-size: 2.4em;
+    font-size: 2em;
     max-width: 340px;
   }
 `;
+
+const SubText = styled.h4`
+font-size: 1em;
+
+ @media only screen and (max-width: 972px) {
+    text-align: center;
+    justify-content: center;
+  }`
 
 const Image = styled.img`
   min-width: 200px;

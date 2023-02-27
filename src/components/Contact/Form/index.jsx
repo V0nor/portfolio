@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
+import { useForm } from 'react-hook-form';
+
 export function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+  const [title, setTitle] = useState('');
   function sendEmail(e) {
     e.preventDefault();
 
-    if (name === '' || email === '' || message === '') {
+    if (name === '' || email === '' || message === '' || title === '') {
       return;
     }
 
@@ -17,6 +19,7 @@ export function ContactForm() {
       from_name: name,
       email: email,
       message: message,
+      text: title,
     };
 
     emailjs
@@ -30,6 +33,7 @@ export function ContactForm() {
         setName('');
         setEmail('');
         setMessage('');
+        setTitle('');
       });
   }
 
@@ -50,6 +54,15 @@ export function ContactForm() {
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          autoComplete="true"
+          required={true}
+        />
+
+        <Input
+          type="text"
+          placeholder="Assunto"
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
           autoComplete="true"
           required={true}
         />

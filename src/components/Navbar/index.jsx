@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { SvgLogo } from '../Logo';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { useEffect, useState, useRef } from 'react';
-
 export function Navigation() {
   const [openDrawer, toggleDrawer] = useState(false);
   const drawerRef = useRef(null);
@@ -23,7 +22,6 @@ export function Navigation() {
     <>
       <Navbar.Container>
         <Navbar.Logo>Logo</Navbar.Logo>
-
         <HamburgerButton.Container onClick={() => toggleDrawer(true)}>
           <HamburgerButton.Lines />
         </HamburgerButton.Container>
@@ -33,7 +31,7 @@ export function Navigation() {
           </HamburgerButton.Close>
           <Navbar.Item>
             <Link to="sobre" smooth={true} duration={400}>
-              Sobre
+              Quem eu sou
             </Link>
           </Navbar.Item>
           <Navbar.Item>
@@ -43,7 +41,7 @@ export function Navigation() {
           </Navbar.Item>
           <Navbar.Item>
             <Link to="contato" smooth={true} duration={400}>
-              Contato
+              Fale comigo
             </Link>
           </Navbar.Item>
         </Navbar.Items>

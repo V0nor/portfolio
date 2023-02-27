@@ -1,34 +1,46 @@
 import styled from 'styled-components';
-import { FaQuoteRight } from 'react-icons/fa';
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteRight, FaQuoteLeft } from 'react-icons/fa';
+import { Link, animateScroll as scroll } from 'react-scroll';
 export const About = () => {
   return (
     <>
       <ContainerDesc id="sobre">
         <Title>Sobre mim</Title>
         <Desc>
-          Sou um programador Front-end júnior altamente motivado, autodidata e
-          com habilidades sólidas em tecnologias como Javascript, HTML, CSS,
-          SCSS, React, Next, Vite, Styled Components e Git. Como profissional
-          autodidata, sou capaz de aprender rapidamente e de me adaptar a novas
+          Sou um programador Front-end júnior altamente motivado,
+          autodidata e
+          com habilidades sólidas em tecnologias como Javascript, HTML,
+          CSS,
+          SCSS, React, Next, Vite, Styled Components e Git. Como
+          profissional
+          autodidata, sou capaz de aprender rapidamente e de me adaptar a
+          novas
           tecnologias e desafios.
-          <br /> <br /> Além de minhas habilidades técnicas, também possou uma
-          série de soft skills valiosas, incluindo comunicação eficaz, solução
+          <br /> <br /> Além de minhas habilidades técnicas, também possou
+          uma
+          série de soft skills valiosas, incluindo comunicação eficaz,
+          solução
           de problemas, adaptabilidade, trabalho em equipe, resiliência,
           liderança, atenção aos detalhes e flexibilidade. Estou sempre
-          procurando novos desafios e oportunidades para desenvolver minhas
+          procurando novos desafios e oportunidades para desenvolver
+          minhas
           habilidades e ajudar a alcançar os objetivos da equipe. <br />
           <br />
           Estou ansioso para me juntar a uma equipe de desenvolvimento
-          bem-sucedida e colaborar em projetos emocionantes e desafiadores.
-          Acredito que posso trazer uma combinação única de habilidades técnicas
+          e colaborar em projetos emocionantes e
+          desafiadores.
+          Acredito que posso trazer uma combinação única de habilidades
+          técnicas
           e soft skills para a equipe e contribuir para o sucesso geral do
-          projeto. <br />
-          Entre em contato comigo se você estiver procurando por alguém
-          dedicado, apaixonado por tecnologias e com vontade de aprender :)
-          <Github href="https://github.com/V0nor?tab=repositories">
-            Meus Projetos no Github
-          </Github>
+          projeto. <br /><br/>
+          Se você está procurando por alguém dedicado, apaixonado por
+          tecnologias e que está sempre disposto a aprender e crescer,
+          então é comigo mesmo! Vamos trabalhar juntos para criar algo
+          incrível. Entre em contato comigo agora!
+          :)
+          <Contato to="contato" smooth={true} duration={400}>
+              Entrar em contato
+            </Contato>
         </Desc>
         <Title>Ferramentas</Title>
         <Skills>
@@ -118,26 +130,6 @@ export const About = () => {
             </SkillSVG>
             Javascript
           </Skill>
-          {/* <Skill>
-            <SkillSVG
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="TypeScript"
-              viewBox="0 0 512 512"
-              width={46}
-            >
-              <rect
-                width="512"
-                height="512"
-                fill="rgba(245, 61, 83, 1)"
-                rx="15%"
-              />
-              <path
-                fill="#020024"
-                d="M233 284h64v-41H118v41h64v183h51zm84 173c8.1 4.2 18 7.3 29 9.4s23 3.1 35 3.1 23-1.1 34-3.4 20-6.1 28-11c8.1-5.3 15-12 19-21s7.1-19 7.1-32c0-9.1-1.4-17-4.1-24s-6.6-13-12-18c-5.1-5.3-11-10-18-14s-15-8.2-24-12c-6.6-2.7-12-5.3-18-7.9-5.2-2.6-9.7-5.2-13-7.8-3.7-2.7-6.5-5.5-8.5-8.4-2-3-3-6.3-3-10 0-3.4.89-6.5 2.7-9.3s4.3-5.1 7.5-7.1 7.2-3.5 12-4.6c4.7-1.1 9.9-1.6 16-1.6 4.2 0 8.6.31 13 .94 4.6.63 9.3 1.6 14 2.9 4.7 1.3 9.3 2.9 14 4.9 4.4 2 8.5 4.3 12 6.9v-47c-7.6-2.9-16-5.1-25-6.5s-19-2.1-31-2.1-23 1.3-34 3.8-20 6.5-28 12c-8.1 5.4-14 12-19 21-4.7 8.4-7 18-7 30 0 15 4.3 28 13 38 8.6 11 22 19 39 27 6.9 2.8 13 5.6 19 8.3s11 5.5 15 8.4c4.3 2.9 7.7 6.1 10 9.5 2.5 3.4 3.8 7.4 3.8 12 0 3.2-.78 6.2-2.3 9s-3.9 5.2-7.1 7.2-7.1 3.6-12 4.8c-4.7 1.1-10 1.7-17 1.7-11 0-22-1.9-32-5.7-11-3.8-21-9.5-28.1-15.44z"
-              />
-            </SkillSVG>
-            Typescript
-          </Skill> */}
           <Skill>
             <SkillSVG
               xmlns="http://www.w3.org/2000/svg"
@@ -232,35 +224,68 @@ export const About = () => {
             Vite
           </Skill>
         </Skills>
+        <Title>Diferenciais</Title>
+        <Container>
+          <Diferenciais>
+            <div>
+              <Habilidade>Fidelidade no Design</Habilidade>
+              <Text>Eu me dedico à implementação precisa de interfaces,
+                sempre buscando proporcionar a melhor experiência possível
+                para os usuários e atender às expectativas de cada
+                projeto.</Text>
+            </div>
+          </Diferenciais>
+          <Diferenciais>
+            <div>
+              <Habilidade>Flexibilidade</Habilidade>
+              <Text>Sou altamente flexível e capaz de me adaptar
+                rapidamente a mudanças, enfrentando novos desafios e
+                situações com habilidade</Text>
+            </div>
+          </Diferenciais>
+          <Diferenciais>
+            <div>
+              <Habilidade>Resolução de Problemas</Habilidade>
+              <Text>Como desenvolvedor front-end, sou especializado em
+                identificar e resolver problemas de forma ágil e eficaz.
+              </Text>
+            </div>
+          </Diferenciais>
+          <Diferenciais>
+            <div>
+              <Habilidade>Aprendizado Contínuo</Habilidade>
+              <Text>Sou um profissional motivado a buscar constantemente
+                novos conhecimentos e habilidades, mantendo-me atualizado
+                sobre as últimas tecnologias e
+                tendências do mercado.</Text>
+            </div>
+          </Diferenciais>
+        </Container>
         <Frase>
-          <QuoteLeft /> A melhor maneira de começar alguma coisa é parar de
-          falar e dar o primeiro passo
+          <QuoteLeft /> A melhor maneira de começar alguma coisa é
+          parar de falar e dar o primeiro passo
           <QuoteRight />
         </Frase>
       </ContainerDesc>
     </>
   );
 };
-
 const ContainerDesc = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
-  margin-top: 2em;
   background: rgb(2, 0, 36);
   padding-bottom: 8em;
 `;
-
 const Title = styled.h2`
   font-size: 2em;
 `;
-
 const Desc = styled.p`
   font-size: 1.2em;
   line-height: 1;
   max-width: 600px;
+
   text-align: justify;
   line-height: 1.5em;
 
@@ -276,23 +301,22 @@ const Desc = styled.p`
   }
 `;
 
-const Github = styled.a`
-  display: block;
+const Contato = styled(Link)`
+ display: block;
   margin: 1em auto;
   padding: 15px 20px;
   width: 200px;
   border-radius: 30px;
-  background-color: rgba(245, 61, 83, 1);
-  text-decoration: none;
+  background-color:#fff;
+  color: #000;
+  text-align: center;
   font-weight: 700;
-  color: unset;
+  cursor: pointer;
   transition: all 0.4s;
 
   &:hover {
     opacity: 0.8;
-  }
-`;
-
+  }`
 const Skills = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -308,7 +332,6 @@ const Skills = styled.ul`
     grid-template-columns: 1fr;
   }
 `;
-
 const Skill = styled.li`
   display: flex;
   align-items: center;
@@ -319,6 +342,33 @@ const Skill = styled.li`
   border-radius: 15px;
 `;
 
+const Container = styled.div`
+display:flex;
+justify-content: center;
+flex-flow: row wrap;
+max-width: 1000px;
+`
+const Diferenciais = styled.div`
+display: flex;
+align-items: center;
+background-color: #f53e53;
+background-image: url('/src/assets/imgs/death-star.svg');
+background-size:cover;
+background-position:-100%;
+margin: 1em;
+padding:2em;
+width: 340px;
+border-radius: 10px;
+`
+const Habilidade = styled.h3`
+line-height: 0;
+font-size: 2em;
+`
+const Text = styled.p`
+font-size: 1.2em;
+max-width: 250px;
+
+`
 const SkillSVG = styled.svg`
   width: 40px;
   padding-right: 10px;
@@ -329,7 +379,8 @@ const Frase = styled.h2`
   align-items: center;
   justify-content: center;
   width: 60vw;
-  margin-top: 5em;
+  margin-top: 4em;
+  margin-bottom: 0;
   padding: 1em;
   font-size: 1.6em;
   border-radius: 15px;
@@ -343,7 +394,7 @@ const QuoteLeft = styled(FaQuoteLeft)`
 `;
 const QuoteRight = styled(FaQuoteRight)`
   position: absolute;
-  font-size: 30px;
+;  /* font-size: 30px; */
   top: -15px;
   left: 18px;
 `;
