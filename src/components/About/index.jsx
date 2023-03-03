@@ -349,8 +349,6 @@ flex-flow: row wrap;
 max-width: 1000px;
 `
 const Diferenciais = styled.div`
-display: flex;
-align-items: center;
 background-color: #f53e53;
 background-image: url('/src/assets/imgs/death-star.svg');
 background-size:cover;
@@ -359,9 +357,13 @@ margin: 1em;
 padding:2em;
 width: 340px;
 border-radius: 10px;
+
+@media only screen and (max-width: 445px) {
+      width: 220px;
+    }
 `
 const Habilidade = styled.h3`
-line-height: 0;
+line-height: auto;
 font-size: 2em;
 `
 const Text = styled.p`

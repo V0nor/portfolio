@@ -23,6 +23,7 @@ const Container = styled.div`
 
 const Title = styled.h2`
   font-size: 2em;
+  text-align: center;
 `;
 
 const Button = styled.a`

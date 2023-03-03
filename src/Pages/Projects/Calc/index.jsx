@@ -1,39 +1,84 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { IoIosFitness } from 'react-icons/io'
+import { RiHome4Line } from 'react-icons/ri'
 export const calcIMC = () => {
-    return (
-        <Container>
-            <Title>Calculadora de IMC</Title>
-            <Projetos>
-                <h1>Calculadora de IMC</h1>
-                <Desc>Permite aos usuários calcular seu IMC com base em sua altura e peso. Utilizei HTML, CSS e JavaScript para criar uma interface intuitiva e fácil de usar. O cálculo do IMC é realizado dinamicamente com base nas informações do usuário, e a classificação do IMC é exibida de forma clara e precisa.</Desc>
-            </Projetos>
-            <Link to="/">Página Inicial</Link>
-        </Container>
-    );
-};
+  return (
+    <Container>
+      <Title>
+        Fitness Just Go
+        <Icon />
+      </Title>
+
+      <Desc>
+        Este site fitness oferece uma série de recursos para ajudar os
+        usuários a alcançarem seus objetivos de saúde e fitness,
+        incluindo exercícios ilustrados, calculadora de IMC,
+        temporizador integrado e conteúdo educativo sobre exercícios,
+        nutrição e saúde. Além disso, pode oferecer funcionalidades
+        adicionais, como um sistema de rastreamento de progresso e
+        programas de treinamento personalizados.
+        <br />
+        <br />
+        Em resumo, o site tem como objetivo fornecer recursos e
+        informações valiosas para ajudar os usuários a melhorar sua
+        qualidade de vida e se tornarem mais saudáveis e em forma 💪.
+      </Desc>
+      <Voltar to="/">
+        Voltar para a Página Inicial{' '}
+        <RiHome4Line className="icon__home" />
+      </Voltar>
+    </Container>
+  )
+}
+
 const Container = styled.div`
-display:block;`
-
-const Projetos = styled.div`
-display: block;
-/* Centering the element. */
-
-width: 400px;
-text-align: center;
-background-color:blue;`
+    display: flex;
+    flex-direction: column;
+`
 
 const Title = styled.h2`
-  font-size: 2em;
-  text-align: center;
-`;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    text-align: center;
+`
+const Voltar = styled(Link)`
+    display: flex;
+    align-items: center;
+    margin: 2em auto;
+    padding: 1rem;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 0.4s;
+    &:hover {
+        color: #fff;
+        background-color: #f53d53;
+    }
+
+    .icon__home {
+        font-size: 1.2em;
+        padding:4px;
+    }
+`
+
+const Icon = styled(IoIosFitness)`
+    font-size: 2em;
+    padding: 0.65rem;
+`
+
 const Desc = styled.p`
-  font-size: 1;
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
-`;
+    margin: auto;
+    padding: 1rem;
+    max-width: 650px;
+    font-size: 1em;
+    text-align: justify;
+    background-color: #f53d53;
+    border-radius: 10px;
+`
 
-
-export default calcIMC;
+export default calcIMC
