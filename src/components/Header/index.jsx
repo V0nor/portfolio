@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { SocialBar } from '../SocialBar';
+
 export const Header = () => {
   return (
     <>
@@ -12,8 +12,6 @@ export const Header = () => {
         >
           <Bio>E aí, pessoal! Sou o Victor, um programador Front-end
             apaixonado por criar sites e interfaces incríveis!</Bio>
-          <SubText>Minhas Redes Sociais</SubText>
-          <SocialBar />
 
         </motion.div>
         <motion.div
@@ -71,14 +69,6 @@ const Bio = styled.h2`
     max-width: 280px;
   }
 `;
-
-const SubText = styled.h4`
-font-size: 1em;
-
- @media only screen and (max-width: 972px) {
-    text-align: center;
-    justify-content: center;
-  }`
 
 const Image = styled.img`
   min-width: 200px;

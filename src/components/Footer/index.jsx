@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import {FaDev} from 'react-icons/fa'
+import { FaDev } from 'react-icons/fa'
 export const Footer = () => {
   return (
     <Container>
-    <Title>Portfólio <Icon/></Title>
+      <Title>Portfólio <Icon /></Title>
     </Container>
   );
 };

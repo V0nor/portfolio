@@ -16,14 +16,14 @@ const Container = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
   color: #000;
   background: #fff;
 `;
 
 const Title = styled.h2`
   font-size: 2em;
-  text-align: center;
+
 `;
 
 const Button = styled.a`

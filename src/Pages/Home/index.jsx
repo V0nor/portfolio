@@ -5,6 +5,7 @@ import { Contact } from '../../components/Contact';
 import Project from '../../components/Project';
 import { Footer } from '../../components/Footer';
 
+
 export const homePage = () => {
   return (
     <>

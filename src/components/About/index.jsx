@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FaQuoteRight, FaQuoteLeft } from 'react-icons/fa';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { SocialBar } from '../SocialBar';
 export const About = () => {
   return (
     <>
@@ -38,10 +39,12 @@ export const About = () => {
           então é comigo mesmo! Vamos trabalhar juntos para criar algo
           incrível. Entre em contato comigo agora!
           :)
-          <Contato to="contato" smooth={true} duration={400}>
-            Entrar em contato
-          </Contato>
         </Desc>
+        <Contato to="contato" smooth={true} duration={400}>
+          Entrar em contato
+        </Contato>
+        <SubText>Minhas Redes Sociais</SubText>
+        <Social />
         <Title>Ferramentas</Title>
         <Skills>
           <Skill>
@@ -227,38 +230,30 @@ export const About = () => {
         <Title>Diferenciais</Title>
         <Container>
           <Diferenciais>
-            <div>
-              <Habilidade>Fidelidade no Design</Habilidade>
-              <Text>Eu me dedico à implementação precisa de interfaces,
-                sempre buscando proporcionar a melhor experiência possível
-                para os usuários e atender às expectativas de cada
-                projeto.</Text>
-            </div>
+            <Habilidade>Fidelidade no Design</Habilidade>
+            <Text>Eu me dedico à implementação precisa de interfaces,
+              sempre buscando proporcionar a melhor experiência possível
+              para os usuários e atender às expectativas de cada
+              projeto.</Text>
           </Diferenciais>
           <Diferenciais>
-            <div>
-              <Habilidade>Flexibilidade</Habilidade>
-              <Text>Sou altamente flexível e capaz de me adaptar
-                rapidamente a mudanças, enfrentando novos desafios e
-                situações com habilidade</Text>
-            </div>
+            <Habilidade>Flexibilidade</Habilidade>
+            <Text>Sou altamente flexível e capaz de me adaptar
+              rapidamente a mudanças, enfrentando novos desafios e
+              situações com habilidade</Text>
           </Diferenciais>
           <Diferenciais>
-            <div>
-              <Habilidade>Resolução de Problemas</Habilidade>
-              <Text>Como desenvolvedor front-end, sou especializado em
-                identificar e resolver problemas de forma ágil e eficaz.
-              </Text>
-            </div>
+            <Habilidade>Resolução de Problemas</Habilidade>
+            <Text>Como desenvolvedor front-end, sou especializado em
+              identificar e resolver problemas de forma ágil e eficaz.
+            </Text>
           </Diferenciais>
           <Diferenciais>
-            <div>
-              <Habilidade>Aprendizado Contínuo</Habilidade>
-              <Text>Sou um profissional motivado a buscar constantemente
-                novos conhecimentos e habilidades, mantendo-me atualizado
-                sobre as últimas tecnologias e
-                tendências do mercado.</Text>
-            </div>
+            <Habilidade>Aprendizado Contínuo</Habilidade>
+            <Text>Sou um profissional motivado a buscar constantemente
+              novos conhecimentos e habilidades, mantendo-me atualizado
+              sobre as últimas tecnologias e
+              tendências do mercado.</Text>
           </Diferenciais>
         </Container>
         <Frase>
@@ -396,7 +391,17 @@ const QuoteLeft = styled(FaQuoteLeft)`
 `;
 const QuoteRight = styled(FaQuoteRight)`
   position: absolute;
-;  /* font-size: 30px; */
   top: -15px;
   left: 18px;
 `;
+
+const SubText = styled.p`
+font-size: 1em;
+font-weight: 700;
+text-align: center;
+margin: auto;
+`
+const Social = styled(SocialBar)`
+display: inline-block;
+margin:auto;
+text-align:center;`

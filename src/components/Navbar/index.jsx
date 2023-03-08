@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { SvgLogo } from '../Logo';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { useEffect, useState, useRef } from 'react';
 export function Navigation() {
   const [openDrawer, toggleDrawer] = useState(false);
@@ -143,12 +143,10 @@ const HamburgerButton = {
       pointer-events: none;
     }
     &:after {
-      /* Move bottom line below center line */
       top: -0.8rem;
     }
 
     &:before {
-      /* Move top line on top of center line */
       top: 0.8rem;
     }
   `,

@@ -19,12 +19,8 @@ export const SocialBar = () => {
 };
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media only screen and (max-width: 972px) {
-    justify-content: center;
-  }
+ margin: 1em;
+ text-align: center;
 `;
 
 const Link = styled.a`
@@ -34,15 +30,7 @@ const Link = styled.a`
   color:#fff;
 
   &:hover {
-    color: rgb(2, 0, 36);
+    color:rgba(245, 61, 83, 1);
     transform: translateY(-3px);
-  }
-
-  @media only screen and (max-width: 960px) {
-    font-size: 2.3em;
-
-    &:hover {
-      color:rgba(245, 61, 83, 1);
-    }
   }
 `;

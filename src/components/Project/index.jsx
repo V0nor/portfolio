@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import Starwars from '/src/assets/imgs/death.svg'
-
 export const Project = () => {
   return (
     <Container id="projetos">
@@ -92,7 +90,7 @@ export const Project = () => {
 
         <Link to="/projetos">
           <Projetos>
-            <Text>Todo List</Text>
+            <Text>To-Do App</Text>
           </Projetos>
           <IconContainer>
             <IconText>Tecnologias usadas:</IconText>
@@ -180,17 +178,14 @@ export const Project = () => {
 const Title = styled.h2`
   font-size: 2em;
   margin: 0;
-  line-height: 0;
   text-align: center;
 `;
 const Desc = styled.p`
   font-size: 1em;
-  margin:30px;
   text-align: center;
 `;
 
 const Container = styled.div`
-  margin: auto;
   background-color: #020024;
 `;
 
@@ -211,15 +206,38 @@ const Projetos = styled.div`
   background: #bdc3c7;
   background-image: url('/src/assets/imgs/death.svg');
   background-size:cover;
-  background-position:-100%;
+  background-position:-80%;
   cursor: pointer;
   transition: all 0.4s ease-out;
 
   &:hover {
-    background-position: left;
+    background-position: 85% 85%;
     background-color:#f53d53;
   }
 `;
+
+const IconContainer = styled.div`
+text-align:center;
+`;
+
+const Text = styled.h2`
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.2em;
+  color:#fff;
+`;
+
+const IconsSVG = styled.svg`
+  width: 45px;
+  fill: #f53d53;
+`;
+const IconText = styled.h4`
+  line-height:0;
+`;
+
+
 const Github = styled.a`
   display: block;
   margin: 3em  auto;
@@ -237,32 +255,5 @@ const Github = styled.a`
   }
 `;
 
-const IconContainer = styled.div`
-text-align:center;
-`;
-const IconsSVG = styled.svg`
-  margin:auto;
-  padding:auto;
-  width: 40px;
-  fill: #f53d53;
-`;
-const IconText = styled.h4`
-  text-align:center;
-  line-height:0;
-`;
-
-const Text = styled.div`
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  text-align: center;
-  color:#fff;
-  font-weight:800;
-  transition: all 0.4s;
-  width: 100%;
-  height: 100%;
-`;
 
 export default Project;
