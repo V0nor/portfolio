@@ -1,23 +1,17 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { IoIosFitness } from 'react-icons/io'
 import { RiHome4Line } from 'react-icons/ri'
 export const calcIMC = () => {
   return (
     <Container>
       <Title>
-        Fitness Just Go
-        <Icon />
+        Contador de Calorias
       </Title>
 
       <Desc>
-        Este site fitness oferece uma série de recursos para ajudar os
-        usuários a alcançarem seus objetivos de saúde e fitness,
-        incluindo exercícios ilustrados, calculadora de IMC,
-        temporizador integrado e conteúdo educativo sobre exercícios,
-        nutrição e saúde. Além disso, pode oferecer funcionalidades
-        adicionais, como um sistema de rastreamento de progresso e
-        programas de treinamento personalizados.
+        Ficar e permanecer saudável requer uma combinação de equilíbrio mental, exercício e nutrição. O objetivo do aplicativo Calorie Counter é ajudar o usuário a atender às necessidades nutricionais contando calorias para vários alimentos.
+
+        Este aplicativo fornece o número de calorias com base no resultado de uma pesquisa do usuário por um tipo de alimento. Os dados crus de alimentos MyPyramid do Departamento de Agricultura dos EUA serão pesquisados ​​para determinar os valores de calorias.
         <br />
         <br />
         Em resumo, o site tem como objetivo fornecer recursos e
@@ -41,7 +35,7 @@ const Title = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2em;
+    font-size: 2em;
     text-align: center;
 `
 const Voltar = styled(Link)`
@@ -59,26 +53,15 @@ const Voltar = styled(Link)`
         color: #fff;
         background-color: #f53d53;
     }
-
-    .icon__home {
-        font-size: 1.2em;
-        padding:4px;
-    }
 `
-
-const Icon = styled(IoIosFitness)`
-    font-size: 2em;
-    padding: 0.65rem;
-`
-
 const Desc = styled.p`
     margin: auto;
     padding: 1rem;
-    max-width: 650px;
+    max-width: 85vw;
     font-size: 1em;
     text-align: justify;
     background-color: #f53d53;
     border-radius: 10px;
-`
 
+`
 export default calcIMC

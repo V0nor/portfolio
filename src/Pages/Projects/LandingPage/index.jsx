@@ -1,29 +1,25 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { RiHome4Line, RiPagesFill } from 'react-icons/ri'
+import { RiHome4Line } from 'react-icons/ri'
+
 export const LandingPage = () => {
     return (
         <Container>
             <Title>
-                Landing Page
-                <Icon />
+                Encontre o Livro!
             </Title>
 
             <Desc>
-                Este site fitness oferece uma série de recursos para ajudar os
-                usuários a alcançarem seus objetivos de saúde e fitness,
-                incluindo exercícios ilustrados, calculadora de IMC,
-                temporizador integrado e conteúdo educativo sobre exercícios,
-                nutrição e saúde. Além disso, pode oferecer funcionalidades
-                adicionais, como um sistema de rastreamento de progresso e
-                programas de treinamento personalizados.
+                Ficar e permanecer saudável requer uma combinação de equilíbrio mental, exercício e nutrição. O objetivo do aplicativo Calorie Counter é ajudar o usuário a atender às necessidades nutricionais contando calorias para vários alimentos.
+
+                Este aplicativo fornece o número de calorias com base no resultado de uma pesquisa do usuário por um tipo de alimento. Os dados crus de alimentos MyPyramid do Departamento de Agricultura dos EUA serão pesquisados ​​para determinar os valores de calorias.
                 <br />
                 <br />
                 Em resumo, o site tem como objetivo fornecer recursos e
                 informações valiosas para ajudar os usuários a melhorar sua
                 qualidade de vida e se tornarem mais saudáveis e em forma 💪.
             </Desc>
-            <Voltar exact to="/">
+            <Voltar to="/">
                 Voltar para a Página Inicial{' '}
                 <RiHome4Line className="icon__home" />
             </Voltar>
@@ -40,7 +36,7 @@ const Title = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2em;
+    font-size: 2em;
     text-align: center;
 `
 const Voltar = styled(Link)`
@@ -58,26 +54,15 @@ const Voltar = styled(Link)`
         color: #fff;
         background-color: #f53d53;
     }
-
-    .icon__home {
-        font-size: 1.2em;
-        padding:4px;
-    }
 `
-
-const Icon = styled(RiPagesFill)`
-    font-size: 2em;
-    padding: 0.65rem;
-`
-
 const Desc = styled.p`
     margin: auto;
     padding: 1rem;
-    max-width: 650px;
+    max-width: 85vw;
     font-size: 1em;
     text-align: justify;
     background-color: #f53d53;
     border-radius: 10px;
-`
 
+`
 export default LandingPage

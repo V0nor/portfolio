@@ -6,7 +6,7 @@ export const Header = () => {
     <>
       <Container>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
+          initial={{ opacity: 0, scale: 0.75 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
@@ -44,7 +44,7 @@ const Container = styled.div`
   );
   @media only screen and (max-width: 972px) {
     height: auto;
-    margin-top: 2em;
+    margin-top: 0;
     background: rgb(2, 0, 36);
   }
   
