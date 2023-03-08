@@ -20,7 +20,7 @@ export const Header = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
 
-          <Image src="src/assets/imgs/fotoperfil.jpg" />
+          <Image src="public/imgs/fotoperfil.jpg" />
         </motion.div>
       </Container>
     </>

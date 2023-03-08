@@ -345,7 +345,7 @@ max-width: 1000px;
 `
 const Diferenciais = styled.div`
 background-color: #f53e53;
-background-image: url('/src/assets/imgs/death.svg');
+background-image: url('/public/imgs/death.svg');
 background-size:cover;
 background-position:-100%;
 margin: 1em;

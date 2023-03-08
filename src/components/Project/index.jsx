@@ -204,7 +204,7 @@ const Projetos = styled.div`
   margin: 1em;
   border-radius: 15px;
   background: #bdc3c7;
-  background-image: url('/src/assets/imgs/death.svg');
+  background-image: url('/public/imgs/death.svg');
   background-size:cover;
   background-position:-80%;
   cursor: pointer;
