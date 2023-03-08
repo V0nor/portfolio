@@ -21,17 +21,14 @@ export const SocialBar = () => {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  flex-flow: row wrap;
 
   @media only screen and (max-width: 972px) {
-    text-align: center;
     justify-content: center;
   }
 `;
 
 const Link = styled.a`
   font-size: 2.5em;
-  padding-right: .5em;
   cursor: pointer;
   transition: all 0.3s;
   color:#fff;
@@ -43,5 +40,9 @@ const Link = styled.a`
 
   @media only screen and (max-width: 960px) {
     font-size: 2.3em;
+
+    &:hover {
+      color:rgba(245, 61, 83, 1);
+    }
   }
 `;

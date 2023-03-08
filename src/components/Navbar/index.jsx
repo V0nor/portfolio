@@ -54,7 +54,7 @@ const Navbar = {
   Container: styled.nav`
     flex: 1;
     align-self: flex-start;
-    padding: 1rem 3rem;
+    padding:2px 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,7 +84,7 @@ const Navbar = {
       background-color: black;
       transition: 0.4s;
       transform: ${({ openDrawer }) =>
-        openDrawer ? `translateX(0)` : `translateX(100%)`};
+      openDrawer ? `translateX(0)` : `translateX(100%)`};
     }
   `,
   Item: styled.li`

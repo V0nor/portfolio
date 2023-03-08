@@ -32,15 +32,15 @@ export const About = () => {
           Acredito que posso trazer uma combinação única de habilidades
           técnicas
           e soft skills para a equipe e contribuir para o sucesso geral do
-          projeto. <br /><br/>
+          projeto. <br /><br />
           Se você está procurando por alguém dedicado, apaixonado por
           tecnologias e que está sempre disposto a aprender e crescer,
           então é comigo mesmo! Vamos trabalhar juntos para criar algo
           incrível. Entre em contato comigo agora!
           :)
           <Contato to="contato" smooth={true} duration={400}>
-              Entrar em contato
-            </Contato>
+            Entrar em contato
+          </Contato>
         </Desc>
         <Title>Ferramentas</Title>
         <Skills>
@@ -350,7 +350,7 @@ max-width: 1000px;
 `
 const Diferenciais = styled.div`
 background-color: #f53e53;
-background-image: url('/src/assets/imgs/death-star.svg');
+background-image: url('/src/assets/imgs/death.svg');
 background-size:cover;
 background-position:-100%;
 margin: 1em;

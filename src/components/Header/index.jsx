@@ -12,7 +12,7 @@ export const Header = () => {
         >
           <Bio>E aí, pessoal! Sou o Victor, um programador Front-end
             apaixonado por criar sites e interfaces incríveis!</Bio>
-            <SubText>Minhas Redes Sociais</SubText>
+          <SubText>Minhas Redes Sociais</SubText>
           <SocialBar />
 
         </motion.div>
@@ -22,7 +22,7 @@ export const Header = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
 
-          <Image src="../imgs/fotoperfil.jpg" />
+          <Image src="src/assets/imgs/fotoperfil.jpg" />
         </motion.div>
       </Container>
     </>
@@ -43,9 +43,9 @@ const Container = styled.div`
     rgba(245, 61, 83, 1) 20%
   );
   @media only screen and (max-width: 972px) {
+    height: auto;
     margin-top: 2em;
     background: rgb(2, 0, 36);
-    flex-flow: row-reverse wrap;
   }
   
 `;
@@ -65,6 +65,10 @@ const Bio = styled.h2`
   @media only screen and (max-width: 451px) {
     font-size: 2em;
     max-width: 340px;
+  }
+  @media only screen and (max-width: 360px) {
+    font-size: 1.6em;
+    max-width: 280px;
   }
 `;
 
