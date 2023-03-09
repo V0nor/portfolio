@@ -1,5 +1,5 @@
 # Portfólio dev!
-Bem-vindo ao meu portfólio de desenvolvimento! Este é um repositório que contém alguns dos meus projetos de programação, experiência profissional e habilidades de programação.
+Bem-vindo ao meu portfólio Dev! Este é um repositório que contém alguns dos meus projetos de programação, experiência profissional e habilidades de programação.
 <br><br>
 <img src="./portfolio.png">
 
